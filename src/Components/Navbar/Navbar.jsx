@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+import { Nav } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <div>
@@ -57,47 +59,67 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-3xl font-bold italic text-yellow-500 rounded">
-            <span className="text-yellow-500">
-              <FontAwesomeIcon className="me-3" icon={faUtensils} />
-            </span>
-            Cuisine Craze
-          </a>
+
+          <div>
+            {" "}
+            <a
+              className="btn btn-ghost normal-case text-3xl font-bold italic text-yellow-500 rounded"
+              style={{
+                fontFamily: "Brush Script MT, cursive",
+              }}
+            >
+              <span className="text-yellow-500 ">
+                <FontAwesomeIcon className="me-3" icon={faUtensils} />
+              </span>
+              Cuisine Craze
+            </a>
+          </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex={0}>
-              <a>
-                Parent
-                <svg
-                  className="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                </svg>
-              </a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
-          </ul>
-        </div>
-        <div className="navbar-end">
-          <a className="btn">Get started</a>
+        <div className=" hidden lg:flex ">
+          <Nav className="text-lg">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-yellow-500 font-semibold   ms-4"
+                  : "text-black ms-4 font-semibold text-decoration-none "
+              }
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-yellow-500 font-semibold   ms-4"
+                  : "text-black ms-4 font-semibold text-decoration-none "
+              }
+            >
+              About Us
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-yellow-500 font-semibold   ms-4"
+                  : "text-black ms-4 font-semibold text-decoration-none "
+              }
+            >
+              Blogs
+            </NavLink>
+
+            <NavLink
+              to="/login"
+              className={({ isActive }) =>
+                isActive
+                  ? "text-yellow-500 font-semibold   ms-4"
+                  : "text-black ms-4 font-semibold text-decoration-none "
+              }
+            >
+              Login
+            </NavLink>
+          </Nav>
         </div>
       </div>
     </div>
