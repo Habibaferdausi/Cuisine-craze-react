@@ -8,7 +8,7 @@ AOS.init();
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       {/* carousel section */}
       <div className="mb-20 ">
         <div className="carousel h-400 mt-10 w-full">
@@ -138,7 +138,7 @@ const Home = () => {
         <div className="mt-8 text-start lg:mt-20">
           <div class="grid grid-cols-1 lg:grid-cols-2 mt-2  lg:mt-20 lg:pt-20  lg:pb-20">
             <div className=" text-start">
-              <div data-aos="fade-up">
+              <div data-aos="fade-in">
                 <h1 className="text-black text-5xl  mb-5 mt-12 font-semibold ">
                   About{" "}
                   <span
@@ -152,7 +152,7 @@ const Home = () => {
                 </h1>
               </div>
 
-              <div data-aos="fade-right">
+              <div data-aos="fade-down-right">
                 <p className="mt-4  mb-3 me-3 text-xl ">
                   Welcome to Cuisine Craze, your destination for authentic and
                   delicious Chinese cuisine! where we offer a tantalizing
@@ -169,7 +169,12 @@ const Home = () => {
                 </Link>
               </div>
             </div>
-            <div data-aos="fade-left" className=" border rounded ">
+            <div
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
+              className=" border rounded "
+            >
               <img
                 src="https://images.pexels.com/photos/5953496/pexels-photo-5953496.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt=""
@@ -180,7 +185,37 @@ const Home = () => {
         </div>
       </div>
 
-      {/* why choose */}
+      {/* background text */}
+      <section
+        className="bg-cover bg-center mt-10 flex items-center justify-center"
+        style={{
+          backgroundImage: `url(https://images.unsplash.com/photo-1509358271058-acd22cc93898?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)`,
+          height: "400px",
+        }}
+      >
+        <div
+          className="text-center"
+          data-aos="fade-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="5000"
+        >
+          <h1 className="text-white text-5xl tracking-widest  mb-5 mt-12 font-semibold ">
+            <span
+              className="text-yellow-500"
+              style={{
+                fontFamily: "Brush Script MT, cursive",
+              }}
+            >
+              True Passion
+            </span>
+          </h1>
+          <div data-aos="fade-right">
+            <p className="text-4xl tracking-widest font-bold text-white mt-4">
+              Natural Flavors
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
