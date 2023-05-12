@@ -390,59 +390,59 @@ const Home = () => {
         </div>
 
         <div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-2 mt-5 mx-10"
-          data-aos="fade-right"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-2 mt-5 mx-10 mb-20"
+          data-aos-duration="3000"
         >
-          <div className="h-100">
+          <div className="h-100" data-aos="fade-right">
             <img
               src="https://images.pexels.com/photos/1833337/pexels-photo-1833337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="h-100">
+          <div className="h-100" data-aos="fade-left">
             <img
               src="https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="h-100">
+          <div className="h-100" data-aos="fade-up-left">
             <img
               src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="h-100">
+          <div className="h-100" data-aos="fade-up-right">
             <img
               src="https://images.pexels.com/photos/2734288/pexels-photo-2734288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="h-100">
+          <div className="h-100" data-aos="flip-left">
             <img
               src="https://images.pexels.com/photos/3789885/pexels-photo-3789885.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt=""
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="h-100">
+          <div className="h-100" data-aos="flip-right">
             <img
               src="https://images.pexels.com/photos/3659862/pexels-photo-3659862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="h-100">
+          <div className="h-100" data-aos="flip-left">
             <img
               src="https://images.pexels.com/photos/2689421/pexels-photo-2689421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt=""
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="h-100">
+          <div className="h-100" data-aos="flip-right">
             <img
               src="https://images.pexels.com/photos/434283/pexels-photo-434283.jpeg?auto=compress&cs=tinysrgb&w=600"
               alt=""
