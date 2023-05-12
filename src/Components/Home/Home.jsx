@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="">
       {/* carousel section */}
-      <div className="mb-20 ">
+      <div className="mb-20 mx-10">
         <div className="carousel h-400 mt-10 w-full">
           <div
             id="slide1"
@@ -135,7 +135,7 @@ const Home = () => {
       {/* About section */}
 
       <div>
-        <div className="mt-8 text-start lg:mt-20">
+        <div className="mt-8 mx-10 text-start lg:mt-20">
           <div class="grid grid-cols-1 lg:grid-cols-2 mt-2  lg:mt-20 lg:pt-20  lg:pb-20">
             <div className=" text-start">
               <div data-aos="fade-in">
@@ -199,7 +199,7 @@ const Home = () => {
           data-aos-easing="ease-out-cubic"
           data-aos-duration="5000"
         >
-          <h1 className="text-white text-5xl tracking-widest  mb-5 mt-12 font-semibold ">
+          <h1 className="text-white text-2xl lg:text-5xl tracking-widest  mb-5 mt-12 font-semibold ">
             <span
               className="text-yellow-500"
               style={{
@@ -210,7 +210,7 @@ const Home = () => {
             </span>
           </h1>
           <div data-aos="fade-right">
-            <p className="text-4xl tracking-widest font-bold text-white mt-4">
+            <p className="text-2xl lg:text-4xl tracking-widest font-bold text-white mt-4">
               Natural Flavors
             </p>
           </div>
