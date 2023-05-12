@@ -367,25 +367,88 @@ const Home = () => {
         </div>
       </section>
 
-      {/* events */}
+      {/* instagram */}
 
       <section className="mt-20">
         <div data-aos="fade-down">
           <h1 className="text-black text-5xl  text-center mb-5 mt-12 font-semibold ">
+            Stay{" "}
             <span
               className="text-yellow-500 ms-3"
               style={{
                 fontFamily: "Brush Script MT, cursive",
               }}
             >
-              Events{" "}
+              Connected{" "}
             </span>{" "}
           </h1>
         </div>
         <div data-aos="fade-up-right">
           <h1 className="text-gray-600 text-2xl lg:text-4xl  text-center mb-10 font-semibold ">
-            Next Coming
+            Follow on Instagram
           </h1>
+        </div>
+
+        <div
+          className="grid grid-cols-2 lg:grid-cols-4 gap-2 mt-5 mx-10"
+          data-aos="fade-right"
+        >
+          <div className="h-100">
+            <img
+              src="https://images.pexels.com/photos/1833337/pexels-photo-1833337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="h-100">
+            <img
+              src="https://images.pexels.com/photos/2092906/pexels-photo-2092906.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="h-100">
+            <img
+              src="https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="h-100">
+            <img
+              src="https://images.pexels.com/photos/2734288/pexels-photo-2734288.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="h-100">
+            <img
+              src="https://images.pexels.com/photos/3789885/pexels-photo-3789885.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="h-100">
+            <img
+              src="https://images.pexels.com/photos/3659862/pexels-photo-3659862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="h-100">
+            <img
+              src="https://images.pexels.com/photos/2689421/pexels-photo-2689421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="h-100">
+            <img
+              src="https://images.pexels.com/photos/434283/pexels-photo-434283.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </section>
     </div>
