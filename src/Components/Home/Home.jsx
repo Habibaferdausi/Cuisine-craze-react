@@ -216,6 +216,178 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* services */}
+      <section className="mt-20">
+        <div data-aos="fade-down">
+          <h1 className="text-black text-5xl  text-center mb-5 mt-12 font-semibold ">
+            Our
+            <span
+              className="text-yellow-500 ms-3"
+              style={{
+                fontFamily: "Brush Script MT, cursive",
+              }}
+            >
+              Services{" "}
+            </span>{" "}
+          </h1>
+        </div>
+        <div data-aos="fade-up-right">
+          <h1 className="text-gray-500 text-2xl lg:text-4xl  text-center mb-10 font-semibold ">
+            Quality & Passion with Our Services
+          </h1>
+        </div>
+        {/* services card */}
+
+        <div
+          className=" grid grid-cols-1 lg:grid-cols-4 mx-10 lg:mx-20 gap-2 "
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
+          {/* card1 */}
+          <div className="card card-compact w-70  bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://img.freepik.com/free-photo/delicious-fried-chicken-plate_144627-27383.jpg?w=740&t=st=1683899251~exp=1683899851~hmac=5eeae6b190510c13fe15b71cef3391d8b1d90988c4e0384d58ad971c7119c756"
+                alt="Food"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-yellow-500 font-bold text-2xl">
+                Fresh Food
+              </h2>
+              <p className="text-base">
+                Experience fresh, local, and organic ingredients in our
+                seasonally-inspired menu. Savor the difference in every bite and
+                indulge in a unique dining experience.
+              </p>
+              <div className="card-actions justify-end"></div>
+            </div>
+          </div>
+          {/* card2 */}
+          <div className="card card-compact w-70 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://img.freepik.com/free-photo/sparkling-glassware-stands-long-table-prepared-wedding-di_8353-688.jpg?w=740&t=st=1683898542~exp=1683899142~hmac=2e61e7c3abe315aa34b2afb32ba23971300c8192b74122b4104cb8cde628701e"
+                alt="Catering"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-2xl text-yellow-500 font-bold">
+                Catering
+              </h2>
+              <p className="text-base">
+                Our catering services offer customizable menus and professional
+                service to make your occasion unforgettable. Contact us to
+                discuss your needs.
+              </p>
+              <div className="card-actions justify-end"></div>
+            </div>
+          </div>
+          {/* card3 */}
+          <div className="card card-compact w-70 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://img.freepik.com/free-photo/close-up-chef-cooking-restaurant-kitchen_329181-16153.jpg?w=740&t=st=1683898754~exp=1683899354~hmac=f5f78127daba5a58377b7964de56de41543ccb9b3c80731df2e14a9e8d784ad4"
+                alt="chefs"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-2xl text-yellow-500 font-bold">
+                Top Chef
+              </h2>
+              <p className="text-base">
+                Our top chef brings years of culinary expertise to the table,
+                creating innovative dishes that are as beautiful as they are
+                delicious. Come taste the passion in every bite.
+              </p>
+            </div>
+          </div>
+          {/* card4 */}
+          <div className="card card-compact w-70 bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://img.freepik.com/free-vector/way-concept-illustration_114360-1191.jpg?w=740&t=st=1683899033~exp=1683899633~hmac=364aadce10d391b11b545a3a81572bd5f3c631e071d018eb15a6ca9880026bdb"
+                alt="online delivery"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title  text-2xl text-yellow-500 font-bold">
+                Online Delivery
+              </h2>
+              <p className="text-base">
+                Can't make it to our Cuisine? No problem. We offer online
+                ordering and delivery services, so you can enjoy our fresh food
+                from the comfort of your own home.
+              </p>
+              <div className="card-actions justify-end"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* chef section */}
+      <section className="mt-20">
+        <div data-aos="fade-down">
+          <h1 className="text-black text-5xl  text-center mb-5 mt-12 font-semibold ">
+            Our
+            <span
+              className="text-yellow-500 ms-3"
+              style={{
+                fontFamily: "Brush Script MT, cursive",
+              }}
+            >
+              Chefs{" "}
+            </span>{" "}
+          </h1>
+        </div>
+        <div data-aos="fade-up-right">
+          <h1 className="text-gray-500 text-2xl lg:text-4xl  text-center mb-10 font-semibold ">
+            Our Special Chefs
+          </h1>
+        </div>
+
+        <div
+          className="card w-96 h-100 bg-base-100 shadow-xl"
+          data-aos="zoom-in-up"
+        >
+          <figure>
+            <img
+              src="https://images.pexels.com/photos/3814446/pexels-photo-3814446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="chef"
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">Mr. Bean</h2>
+            <p>Famous Chef</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* events */}
+
+      <section className="mt-20">
+        <div data-aos="fade-down">
+          <h1 className="text-black text-5xl  text-center mb-5 mt-12 font-semibold ">
+            <span
+              className="text-yellow-500 ms-3"
+              style={{
+                fontFamily: "Brush Script MT, cursive",
+              }}
+            >
+              Events{" "}
+            </span>{" "}
+          </h1>
+        </div>
+        <div data-aos="fade-up-right">
+          <h1 className="text-gray-600 text-2xl lg:text-4xl  text-center mb-10 font-semibold ">
+            Next Coming
+          </h1>
+        </div>
+      </section>
     </div>
   );
 };
