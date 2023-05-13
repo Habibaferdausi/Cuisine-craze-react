@@ -1,12 +1,31 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 const Navbar = () => {
+  const [scroll, setScroll] = useState(false);
+  const handleScroll = () => {
+    if (window.pageYOffset > 0) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className=" mx-5">
-      <div className="navbar fixed top-0  z-20 w-full bg-base-100">
+    <div className=" mx-5 relative">
+      <div
+        className={`navbar fixed top-0 z-20 w-full bg-transparent ${
+          scroll ? "bg-gray-500" : ""
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
