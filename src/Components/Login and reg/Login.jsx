@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <div>
-      <div className="hero   bg-base-200">
-        <div className="hero  mt-20 ">
+      <div className="hero mb-10  bg-base-200">
+        <div className="hero  mt-20">
           <div className="hero-content flex-col lg:flex-row">
             <div className="w-1/2 mr-12">
               <img
@@ -14,7 +14,7 @@ const Login = () => {
               />
             </div>
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  bg-base-100">
-              <div className="card-body">
+              <div className="">
                 <h1 className="text-3xl text-center font-bold ">Login</h1>
                 <form>
                   <div className="form-control">
@@ -46,7 +46,7 @@ const Login = () => {
                   </div>
                   <div className="form-control mt-6">
                     <input
-                      className="btn bg-red-500 border border-0"
+                      className="btn hover:bg-red-500 border border-0 bg-yellow-500"
                       type="submit"
                       value="Login"
                     />
@@ -66,7 +66,7 @@ const Login = () => {
                 <h2 className=" text-blue-400 text-center font-bold">
                   Sign In With
                 </h2>
-                <div className="flex justify-center items-center gap-5">
+                <div className="flex justify-center mt-4 items-center gap-5">
                   <div>
                     <button className="">
                       <img

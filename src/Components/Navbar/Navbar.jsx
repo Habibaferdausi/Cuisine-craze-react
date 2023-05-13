@@ -134,7 +134,7 @@ const Navbar = () => {
               to="/login"
               className={({ isActive }) =>
                 isActive
-                  ? " text-white font-semibold   ms-4"
+                  ? " text-black font-semibold   ms-4"
                   : " text-yellow-500   ms-4 font-semibold text-decoration-none "
               }
             >
