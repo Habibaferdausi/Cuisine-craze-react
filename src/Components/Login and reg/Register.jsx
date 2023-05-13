@@ -13,7 +13,7 @@ const Register = () => {
             />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <div className="card-body">
+            <div>
               <h1 className="text-3xl text-center text-yellow-500 font-bold">
                 Sign Up
               </h1>
@@ -25,7 +25,7 @@ const Register = () => {
                   <input
                     type="text"
                     name="name"
-                    placeholder="name"
+                    placeholder="Enter Your Name"
                     className="input input-bordered"
                   />
                 </div>
@@ -36,7 +36,7 @@ const Register = () => {
                   <input
                     type="text"
                     name="email"
-                    placeholder="email"
+                    placeholder="Enter Your Email"
                     className="input input-bordered"
                   />
                 </div>
