@@ -57,7 +57,6 @@ const Footer = () => {
             </a>
           </div>
           <p className="mt-20">
-            <hr />
             <small>
               Copyright © 2023 -Habiba Ferdausi Ritu All right reserved
             </small>

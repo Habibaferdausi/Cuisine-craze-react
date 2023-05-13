@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
+
+  const handleLogIn = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, email, password);
+
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        alert("Login successful!");
+      })
+      .catch((error) => {
+        console.log(error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Wrong email or password !",
+        }); // Show alert message when login fails
+      });
+  };
+
+  const handleGoogle = (event) => {};
+
   return (
     <div>
       <div className="hero mb-10  bg-base-200">
@@ -16,7 +45,7 @@ const Login = () => {
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl  bg-base-100">
               <div className="">
                 <h1 className="text-3xl text-center font-bold ">Login</h1>
-                <form>
+                <form onSubmit={handleLogIn}>
                   <div className="form-control">
                     <label className="label">
                       <span className="label-text">Email</span>
@@ -33,7 +62,7 @@ const Login = () => {
                       <span className="label-text">Password</span>
                     </label>
                     <input
-                      type="text"
+                      type="password"
                       name="password"
                       placeholder="Enter Your Password"
                       className="input input-bordered"
@@ -68,7 +97,7 @@ const Login = () => {
                 </h2>
                 <div className="flex justify-center mt-4 items-center gap-5">
                   <div>
-                    <button className="">
+                    <button onClick={handleGoogle}>
                       <img
                         src="https://freesvg.org/img/1534129544.png"
                         alt=""

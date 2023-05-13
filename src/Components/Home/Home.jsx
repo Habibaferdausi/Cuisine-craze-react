@@ -356,7 +356,7 @@ const Home = () => {
           height: "400px",
         }}
       >
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-7">
+        <div class="grid grid-cols-1 lg:grid-cols-5  lg:gap-7">
           <div
             className="text-center"
             data-aos="fade-right"
