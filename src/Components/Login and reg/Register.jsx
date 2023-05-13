@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -17,8 +18,20 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        Swal.fire({
+          icon: "success",
+          title: "Yes",
+          text: "SuccessFully Registered !",
+        });
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log(error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something Wrong!",
+        });
+      });
   };
 
   return (
@@ -53,21 +66,25 @@ const Register = () => {
                     <span className="label-text">Email</span>
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder="Enter Your Email"
                     className="input input-bordered"
+                    required
                   />
                 </div>
                 <div className="form-control">
                   <label className="label">
-                    <span className="label-text">Confirm Password</span>
+                    <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="text"
+                    type="password"
                     name="password"
-                    placeholder="password"
+                    placeholder="Enter Your Password"
                     className="input input-bordered"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Password must contain at least one number, one lowercase letter, one uppercase letter, and be at least 8 characters long."
+                    required
                   />
                   <label className="label">
                     <a href="#" className="label-text-alt link link-hover">

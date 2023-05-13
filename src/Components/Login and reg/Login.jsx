@@ -4,7 +4,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleLogin } = useContext(AuthContext);
 
   const handleLogIn = (event) => {
     event.preventDefault();
@@ -29,7 +29,22 @@ const Login = () => {
       });
   };
 
-  const handleGoogle = (event) => {};
+  const handleGoogle = () => {
+    googleLogin()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        Swal.fire({
+          icon: "success",
+          title: "",
+          text: "Successfully Login !",
+        });
+      })
+
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div>
