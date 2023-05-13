@@ -20,10 +20,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className=" mx-5 relative">
+    <div className="relative">
       <div
         className={`navbar fixed top-0 z-20 w-full bg-transparent ${
-          scroll ? "bg-gray-500" : ""
+          scroll
+            ? "bg-transparent bg-gradient-to-l   from-transparent to-black  "
+            : ""
         }`}
       >
         <div className="navbar-start">
@@ -79,7 +81,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div>
+          <div className="px-8">
             {" "}
             <a
               className="btn btn-ghost normal-case lg:text-3xl  text-lg font-bold italic text-yellow-500 rounded"
@@ -100,8 +102,8 @@ const Navbar = () => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-yellow-500 font-semibold   ms-4"
-                  : "text-black ms-4 font-semibold text-decoration-none "
+                  ? "font-semibold text-white  ms-4"
+                  : "text-yellow-500  ms-4 font-semibold text-decoration-none "
               }
             >
               Home
@@ -111,8 +113,8 @@ const Navbar = () => {
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "text-yellow-500 font-semibold   ms-4"
-                  : "text-black ms-4 font-semibold text-decoration-none "
+                  ? "font-semibold  text-white ms-4"
+                  : "text-yellow-500  ms-4 font-semibold text-decoration-none "
               }
             >
               About Us
@@ -121,8 +123,8 @@ const Navbar = () => {
               to="/blogs"
               className={({ isActive }) =>
                 isActive
-                  ? "text-yellow-500 font-semibold   ms-4"
-                  : "text-black ms-4 font-semibold text-decoration-none "
+                  ? " font-semibold  text-white ms-4"
+                  : "text-yellow-500 ms-4 font-semibold text-decoration-none "
               }
             >
               Blogs
@@ -132,8 +134,8 @@ const Navbar = () => {
               to="/login"
               className={({ isActive }) =>
                 isActive
-                  ? "text-yellow-500 font-semibold   ms-4"
-                  : "text-black ms-4 font-semibold text-decoration-none "
+                  ? " text-white font-semibold   ms-4"
+                  : " text-yellow-500   ms-4 font-semibold text-decoration-none "
               }
             >
               Login

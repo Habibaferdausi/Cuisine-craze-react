@@ -3,15 +3,36 @@ import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import Aos from "aos";
 // ..
 AOS.init();
 
 const Home = () => {
+  const [dailyMeal, setDailyMeal] = useState(500);
+  const [happyClients, setHappyClients] = useState(450);
+  const [parcelToday, setParcelToday] = useState(90);
+
+  useEffect(() => {
+    Aos.init({
+      once: true,
+      easing: "ease-in-out",
+      duration: 1000,
+    });
+
+    const interval = setInterval(() => {
+      setDailyMeal((dailyMeal) => Math.min(dailyMeal + 1, 600));
+      setHappyClients((happyClients) => Math.min(happyClients + 1, 550));
+      setParcelToday((parcelToday) => Math.min(parcelToday + 1, 170));
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="">
       {/* carousel section */}
-      <div className="mb-20 mx-10">
-        <div className="carousel h-400 mt-10 w-full">
+      <div className="">
+        <div className="carousel h-full w-full">
           <div
             id="slide1"
             className="carousel-item relative rounded w-full"
@@ -20,7 +41,7 @@ const Home = () => {
                 "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/2725744/pexels-photo-2725744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              height: "500px",
+              height: "650px",
             }}
           >
             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 mt-20 top-2/3">
@@ -61,7 +82,7 @@ const Home = () => {
                 "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/2119758/pexels-photo-2119758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              height: "500px",
+              height: "650px",
             }}
           >
             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 mt-20 top-2/3 ">
@@ -97,7 +118,7 @@ const Home = () => {
                 "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              height: "500px",
+              height: "650px",
             }}
           >
             <div className="absolute flex justify-end transform -translate-y-1/2 left-5 right-5 mt-20 top-2/3 ">
@@ -322,6 +343,69 @@ const Home = () => {
               </p>
               <div className="card-actions justify-end"></div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* happy hours section */}
+
+      <section
+        className="bg-cover bg-center mt-10 flex items-center justify-center"
+        style={{
+          backgroundImage: `url(https://img.freepik.com/free-photo/top-view-tasty-shaurma-sliced-pita-sandwich-with-french-fries-ketchup-dark-surface_140725-154955.jpg?w=740&t=st=1683964686~exp=1683965286~hmac=63e628bf9bf7cace23ba0a6a325f388d45e60b796fc867e5256933eeae66a6b5)`,
+          height: "400px",
+        }}
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-7">
+          <div
+            className="text-center"
+            data-aos="fade-right"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="5000"
+          >
+            <h1
+              style={{ fontFamily: "Brush Script MT, cursive" }}
+              className="text-yellow-500 text-2xl lg:text-3xl tracking-widest  mb-5 mt-12 font-semibold "
+            >
+              Daily Meals
+            </h1>
+            <p className="text-2xl font-semibold">
+              <span className="count text-white">{dailyMeal}</span>
+            </p>
+          </div>
+
+          <div
+            className="text-center"
+            data-aos="fade-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="5000"
+          >
+            <h1
+              style={{ fontFamily: "Brush Script MT, cursive" }}
+              className="text-yellow-500 text-2xl lg:text-3xl tracking-widest  mb-5 mt-12 font-semibold "
+            >
+              Parcel Today
+            </h1>
+            <p className="text-2xl font-semibold">
+              <span className="count text-white">{parcelToday}</span>
+            </p>
+          </div>
+
+          <div
+            className="text-center"
+            data-aos="fade-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="5000"
+          >
+            <h1
+              style={{ fontFamily: "Brush Script MT, cursive" }}
+              className="text-yellow-500 text-2xl lg:text-3xl tracking-widest  mb-5 mt-12 font-semibold "
+            >
+              Happy Clients
+            </h1>
+            <p className="text-2xl font-semibold">
+              <span className="count text-white">{happyClients}</span>
+            </p>
           </div>
         </div>
       </section>
