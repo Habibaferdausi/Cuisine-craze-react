@@ -1,6 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useEffect, useState } from "react";
+
 import { Nav } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
@@ -119,7 +120,7 @@ const Navbar = () => {
             </a>
           </div>
         </div>
-        <div className=" hidden lg:flex ">
+        <div className=" hidden lg:flex navbar-center  text-lg">
           <Nav className="text-lg">
             <NavLink
               to="/"
@@ -152,18 +153,14 @@ const Navbar = () => {
             >
               Blogs
             </NavLink>
-
-            <NavLink
-              to="/login"
-              className={({ isActive }) =>
-                isActive
-                  ? " text-black font-semibold   ms-4"
-                  : " text-yellow-500   ms-4 font-semibold text-decoration-none "
-              }
-            >
-              Login
-            </NavLink>
           </Nav>
+        </div>
+        <div className="navbar-end mx-auto text-lg">
+          <button className="btn btn-warning me-4">
+            <Link to="/login" className="text-white">
+              Login
+            </Link>
+          </button>
         </div>
       </div>
     </div>
