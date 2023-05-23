@@ -1,7 +1,10 @@
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
+import Swal from "sweetalert2";
 
 const ChefDetails = () => {
   const chef = useLoaderData();
@@ -75,6 +78,76 @@ const ChefDetails = () => {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="mt-10 ">
+        <h1 className="mt-10 lg:mt-20 text-xxl lg:text-2xl text-yellow-500 font-bold  mb-3 lg:mb-8  pt-5 text-center">
+          Some{" "}
+          <span className="text-red-500 ms-2 me-2">{chef.item.name}'s </span>{" "}
+          Special Recipes{" "}
+        </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-3 mx-10 lg:mx-20 mt-10 ">
+          {chef.item.recipes.map((recipes, value) => (
+            <div
+              key={recipes.id}
+              className="card card-compact bg-base-100 shadow-xl"
+            >
+              <figure>
+                <img
+                  src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                  alt="Shoes"
+                />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title text-green-600 text-xxl font-bold">
+                  {" "}
+                  {recipes.name}
+                </h2>
+                <p className="text-lg ">
+                  <span className="text-red-500 font-bold me-3">
+                    Ingredients:
+                  </span>
+                  {recipes.ingredients}
+                </p>
+                <p className="text-lg">
+                  <span className="text-red-500 font-bold me-3">Method:</span>
+                  {recipes.method}
+                </p>
+                <div className="  flex item-center mt-3  items-center justify-between">
+                  <div>
+                    <h1 className="text-xxl lg:text-2xl me-3 font-semibold bg-slate-200 p-2 rounded">
+                      {" "}
+                      Rating : <span>{recipes.rating}</span>{" "}
+                      <span className="text-yellow-500 mr-1">&#9733;</span>
+                    </h1>
+                  </div>
+                  <div>
+                    <button
+                      className={`${
+                        isButtonDisable(value)
+                          ? "bg-rose-300"
+                          : "bg-red-500 hover:bg-green-700"
+                      } text-white font-bold py-2 px-4 rounded`}
+                      onClick={() => {
+                        handleFav(value);
+                        Swal.fire("Good job!", "Added to Favorite!", "success");
+                      }}
+                      disabled={isButtonDisable(value)}
+                    >
+                      {isButtonDisable(value) ? (
+                        "Favorite Added"
+                      ) : (
+                        <>
+                          <span className="">Add to Favorite</span>
+                          <FontAwesomeIcon icon={faHeart} className="ms-2" />
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
