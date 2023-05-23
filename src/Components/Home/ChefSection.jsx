@@ -46,14 +46,14 @@ const ChefSection = () => {
             <div className="card-body">
               <h1 className="card-title text-xxl lg:text-3xl">{chef.name}</h1>
               <h6>
-                <span className=" me-2  text-yellow-500 font-semibold">
+                <span className=" me-2  text-red-500 font-semibold">
                   Experience :
                 </span>{" "}
                 {chef.years_of_experience} Years
               </h6>
               <h6>
                 {" "}
-                <span className=" me-2  font-semibold text-yellow-500">
+                <span className=" me-2  font-semibold text-red-500">
                   {" "}
                   Numbers of recipes :{" "}
                 </span>{" "}
@@ -70,7 +70,7 @@ const ChefSection = () => {
                 <div>
                   {" "}
                   <Link to={`details/${chef.id}`}>
-                    <AwesomeButton type="danger">View Details</AwesomeButton>;
+                    <AwesomeButton type="whatsapp">View Details</AwesomeButton>
                   </Link>
                 </div>
               </div>

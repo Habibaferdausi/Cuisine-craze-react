@@ -1,6 +1,7 @@
 import Aos from "aos";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Review from "./Review";
 
 const About = () => {
   const [dailyMeal, setDailyMeal] = useState(500);
@@ -20,7 +21,7 @@ const About = () => {
       setHappyClients((happyClients) => Math.min(happyClients + 1, 550));
       setParcelToday((parcelToday) => Math.min(parcelToday + 1, 170));
       setOnlineStore((onlineStore) => Math.min(onlineStore + 2, 110));
-    }, 50);
+    }, 120);
 
     return () => clearInterval(interval);
   }, []);
@@ -168,6 +169,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Review></Review>
     </div>
   );
 };
