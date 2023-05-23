@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Aos from "aos";
+
 // ..
 AOS.init();
 
@@ -23,7 +24,7 @@ const Home = () => {
       setDailyMeal((dailyMeal) => Math.min(dailyMeal + 1, 600));
       setHappyClients((happyClients) => Math.min(happyClients + 1, 550));
       setParcelToday((parcelToday) => Math.min(parcelToday + 1, 170));
-    }, 100);
+    }, 150);
 
     return () => clearInterval(interval);
   }, []);
@@ -361,7 +362,8 @@ const Home = () => {
             className="text-center"
             data-aos="fade-right"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="5000"
+            data-aos-duration="500"
+            data-aos-offset="50"
           >
             <h1
               style={{ fontFamily: "Brush Script MT, cursive" }}
@@ -378,7 +380,8 @@ const Home = () => {
             className="text-center"
             data-aos="fade-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="5000"
+            data-aos-duration="500"
+            data-aos-offset="50"
           >
             <h1
               style={{ fontFamily: "Brush Script MT, cursive" }}
@@ -395,7 +398,8 @@ const Home = () => {
             className="text-center"
             data-aos="fade-left"
             data-aos-easing="ease-out-cubic"
-            data-aos-duration="5000"
+            data-aos-duration="500"
+            data-aos-offset="50"
           >
             <h1
               style={{ fontFamily: "Brush Script MT, cursive" }}

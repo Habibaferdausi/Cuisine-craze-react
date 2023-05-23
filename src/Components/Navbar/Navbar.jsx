@@ -2,7 +2,6 @@ import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 
-import { Nav } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
@@ -121,39 +120,37 @@ const Navbar = () => {
           </div>
         </div>
         <div className=" hidden lg:flex navbar-center  text-lg">
-          <Nav className="text-lg">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                isActive
-                  ? "font-semibold text-white  ms-4"
-                  : "text-yellow-500  ms-4 font-semibold text-decoration-none "
-              }
-            >
-              Home
-            </NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "font-semibold text-white  ms-4"
+                : "text-yellow-500  ms-4 font-semibold text-decoration-none "
+            }
+          >
+            Home
+          </NavLink>
 
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive
-                  ? "font-semibold  text-white ms-4"
-                  : "text-yellow-500  ms-4 font-semibold text-decoration-none "
-              }
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/blogs"
-              className={({ isActive }) =>
-                isActive
-                  ? " font-semibold  text-white ms-4"
-                  : "text-yellow-500 ms-4 font-semibold text-decoration-none "
-              }
-            >
-              Blogs
-            </NavLink>
-          </Nav>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? "font-semibold  text-white ms-4"
+                : "text-yellow-500  ms-4 font-semibold text-decoration-none "
+            }
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) =>
+              isActive
+                ? " font-semibold  text-white ms-4"
+                : "text-yellow-500 ms-4 font-semibold text-decoration-none "
+            }
+          >
+            Blogs
+          </NavLink>
         </div>
         <div className="navbar-end mx-auto text-lg">
           <button className="btn btn-warning me-4">
