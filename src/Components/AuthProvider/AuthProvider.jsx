@@ -48,7 +48,6 @@ const AuthProvider = ({ children }) => {
     const unSubscribe = onAuthStateChanged(auth, (loggedInUser) => {
       setUser(loggedInUser);
       setLoading(false);
-      setAuthChecked(true);
     });
 
     return () => {
@@ -57,13 +56,13 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   const authInfo = {
-    loading: loading || !authChecked,
+    loading,
     createUser,
     googleLogin,
     updateUser,
     user,
     logOut,
-    loginUser,
+
     gitLogin,
   };
 

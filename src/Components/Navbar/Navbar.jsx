@@ -1,9 +1,12 @@
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
   const [scroll, setScroll] = useState(false);
   const handleScroll = () => {
     if (window.pageYOffset > 0) {
@@ -18,6 +21,15 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  console.log(user?.email);
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div className="relative">
@@ -153,11 +165,30 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="navbar-end mx-auto text-lg">
-          <button className="btn btn-warning me-4">
-            <Link to="/login" className="text-white">
-              Login
-            </Link>
-          </button>
+          {user ? (
+            <a href="#" className="flex items-center">
+              <div className="relative">
+                <img
+                  src={user.photoURL}
+                  alt="User"
+                  className="rounded-full mr-2 ms-4"
+                  width="45"
+                  height="45"
+                />
+                <div className="absolute bottom-0 right-0 bg-gray-200 rounded-full w-3 h-3"></div>
+              </div>
+              <span className="mr-3 ">{user.displayName}</span>
+              <button onClick={handleLogout} className="btn btn-danger">
+                Logout
+              </button>
+            </a>
+          ) : (
+            <button className="btn btn-warning me-4">
+              <Link to="/login" className="text-white">
+                Login
+              </Link>
+            </button>
+          )}
         </div>
       </div>
     </div>

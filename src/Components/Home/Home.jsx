@@ -4,6 +4,7 @@ import { TypeAnimation } from "react-type-animation";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Aos from "aos";
+import ChefSection from "./ChefSection";
 
 // ..
 AOS.init();
@@ -415,7 +416,7 @@ const Home = () => {
       </section>
 
       {/* chef section */}
-      <section className="mt-20">
+      {/* <section className="mt-20">
         <div data-aos="fade-down">
           <h1 className="text-black text-5xl  text-center mb-5 mt-12 font-semibold ">
             Our
@@ -453,8 +454,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
-
+      </section> */}
+      <ChefSection></ChefSection>
       {/* instagram */}
 
       <section className="mt-20">
