@@ -417,49 +417,12 @@ const Home = () => {
       </section>
 
       {/* chef section */}
-      {/* <section className="mt-20">
-        <div data-aos="fade-down">
-          <h1 className="text-black text-5xl  text-center mb-5 mt-12 font-semibold ">
-            Our
-            <span
-              className="text-yellow-500 ms-3"
-              style={{
-                fontFamily: "Brush Script MT, cursive",
-              }}
-            >
-              Chefs{" "}
-            </span>{" "}
-          </h1>
-        </div>
-        <div data-aos="fade-up-right">
-          <h1 className="text-gray-500 text-2xl lg:text-4xl  text-center mb-10 font-semibold ">
-            Our Special Chefs
-          </h1>
-        </div>
 
-        <div
-          className="card w-96 h-100 bg-base-100 shadow-xl"
-          data-aos="zoom-in-up"
-        >
-          <figure>
-            <img
-              src="https://images.pexels.com/photos/3814446/pexels-photo-3814446.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt="chef"
-            />
-          </figure>
-          <div className="card-body">
-            <h2 className="card-title">Mr. Bean</h2>
-            <p>Famous Chef</p>
-            <div className="card-actions justify-end">
-              <button className="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <ChefSection></ChefSection>
 
-      {/* instagram */}
       <Review></Review>
+
+      {/* instagram */}
 
       <section className="mt-20">
         <div data-aos="fade-down">
