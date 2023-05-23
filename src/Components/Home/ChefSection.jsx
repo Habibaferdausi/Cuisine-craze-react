@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
+
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 
 const ChefSection = () => {
   const [chef, setChef] = useState([]);
@@ -42,23 +46,33 @@ const ChefSection = () => {
             <div className="card-body">
               <h1 className="card-title text-xxl lg:text-3xl">{chef.name}</h1>
               <h6>
-                <span className=" me-2  text-red-500 font-semibold">
+                <span className=" me-2  text-yellow-500 font-semibold">
                   Experience :
                 </span>{" "}
                 {chef.years_of_experience} Years
               </h6>
               <h6>
                 {" "}
-                <span className=" me-2  font-semibold text-red-500">
+                <span className=" me-2  font-semibold text-yellow-500">
                   {" "}
                   Numbers of recipes :{" "}
                 </span>{" "}
                 {chef.num_recipes}{" "}
               </h6>
-              <div className="card-actions justify-end">
-                <Link to={`details/${chef.id}`}>
-                  <button className=" btn btn-warning "> View Recipes </button>
-                </Link>
+              <div className="card-actions mt-5 lg:mt-7 flex justify-between">
+                <div>
+                  <button className="btn border border-0 bg-blue-400 text-white text-xxl">
+                    Likes :{" "}
+                    <Icon icon="mdi:like-outline" className="ms-2 me-2" />{" "}
+                    {chef.likes}
+                  </button>
+                </div>
+                <div>
+                  {" "}
+                  <Link to={`details/${chef.id}`}>
+                    <AwesomeButton type="danger">View Details</AwesomeButton>;
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
