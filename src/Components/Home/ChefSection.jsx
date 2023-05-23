@@ -70,7 +70,7 @@ const ChefSection = () => {
                 <div>
                   {" "}
                   <Link to={`details/${chef.id}`}>
-                    <AwesomeButton type="whatsapp">View Details</AwesomeButton>
+                    <button className="btn bg-yellow-500 border border-0">View Details</button>
                   </Link>
                 </div>
               </div>

@@ -93,10 +93,10 @@ const ChefDetails = () => {
               className="card card-compact bg-base-100 shadow-xl"
             >
               <figure>
-                <img src={recipes.img} alt="Shoes" />
+                <img src={recipes.img} alt="" className="h-80 " />
               </figure>
               <div className="card-body">
-                <h2 className="card-title text-green-600 text-xxl font-bold">
+                <h2 className="card-title text-red-600 text-2xl font-bold">
                   {" "}
                   {recipes.name}
                 </h2>
