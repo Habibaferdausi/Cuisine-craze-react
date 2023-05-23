@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Aos from "aos";
 import ChefSection from "./ChefSection";
+import Review from "./Review";
 
 // ..
 AOS.init();
@@ -456,7 +457,9 @@ const Home = () => {
         </div>
       </section> */}
       <ChefSection></ChefSection>
+
       {/* instagram */}
+      <Review></Review>
 
       <section className="mt-20">
         <div data-aos="fade-down">
