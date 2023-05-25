@@ -8,6 +8,7 @@ import Register from "../Login and reg/Register";
 import Blogs from "../Pages/Blogs";
 import PrivetRouter from "./PrivetRouter";
 import ChefDetails from "../Pages/ChefDetails";
+import Contact from "../Pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "contact",
+        element: <Contact></Contact>,
       },
       {
         path: "details/:id",

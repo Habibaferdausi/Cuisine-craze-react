@@ -100,18 +100,53 @@ const Navbar = () => {
                 >
                   Blogs
                 </NavLink>
-              </li>
-              <li>
                 <NavLink
-                  to="/login"
+                  to="/contact"
                   className={({ isActive }) =>
                     isActive
-                      ? " text-black font-semibold   ms-4"
-                      : " text-yellow-500   ms-4 font-semibold text-decoration-none "
+                      ? "font-semibold  text-white ms-4"
+                      : "text-yellow-500  ms-4 font-semibold text-decoration-none "
                   }
                 >
-                  Login
+                  Contact
                 </NavLink>
+              </li>
+              <li>
+                <div className="navbar-end mx-auto text-lg">
+                  {user ? (
+                    <NavLink className="ms-3">
+                      <div className=" flex  justify-center items-center">
+                        <div
+                          className="tooltip tooltip-bottom  "
+                          data-tip={user.displayName}
+                        >
+                          <div className=" flex  justify-center items-center">
+                            <button className=" me-5 ">
+                              {" "}
+                              <img
+                                src={user.photoURL}
+                                alt="User Profile"
+                                className="h-11 w-11 rounded-full text-center "
+                              />
+                            </button>
+                            <button
+                              className="btn border border-0 bg-yellow-500 text-white "
+                              onClick={handleLogout}
+                            >
+                              Logout
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </NavLink>
+                  ) : (
+                    <button className="btn btn-warning me-4">
+                      <Link to="/login" className="text-white">
+                        Login
+                      </Link>
+                    </button>
+                  )}
+                </div>
               </li>
             </ul>
           </div>
@@ -162,6 +197,17 @@ const Navbar = () => {
             }
           >
             Blogs
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive
+                ? "font-semibold  text-white ms-4"
+                : "text-yellow-500  ms-4 font-semibold text-decoration-none "
+            }
+          >
+            Contact
           </NavLink>
         </div>
         <div className="navbar-end mx-auto text-lg">
