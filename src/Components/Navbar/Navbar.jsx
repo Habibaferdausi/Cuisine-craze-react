@@ -166,24 +166,31 @@ const Navbar = () => {
         </div>
         <div className="navbar-end mx-auto text-lg">
           {user ? (
-            <a href="#" className="flex items-center">
-              <div className="relative">
-                <img
-                  src={user.photoURL}
-                  alt="User"
-                  className="rounded-full mr-2 ms-4"
-                  width="45"
-                  height="45"
-                />
-                <div className="absolute bottom-0 right-0 bg-gray-200 rounded-full w-3 h-3"></div>
+            <NavLink className="ms-3">
+              <div className=" flex  justify-center items-center">
+                <div
+                  className="tooltip tooltip-bottom  "
+                  data-tip={user.displayName}
+                >
+                  <div className=" flex  justify-center items-center">
+                    <button className=" me-5 ">
+                      {" "}
+                      <img
+                        src={user.photoURL}
+                        alt="User Profile"
+                        className="h-11 w-11 rounded-full text-center "
+                      />
+                    </button>
+                    <button
+                      className="btn border border-0 bg-yellow-500 text-white "
+                      onClick={handleLogout}
+                    >
+                      Logout
+                    </button>
+                  </div>
+                </div>
               </div>
-              <span className="mr-3 text-red-300 font-bold ">
-                {user.displayName}
-              </span>
-              <button onClick={handleLogout} className="btn btn-danger">
-                Logout
-              </button>
-            </a>
+            </NavLink>
           ) : (
             <button className="btn btn-warning me-4">
               <Link to="/login" className="text-white">
