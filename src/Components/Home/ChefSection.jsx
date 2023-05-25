@@ -14,7 +14,7 @@ const ChefSection = () => {
       setChef(data);
     });
   return (
-    <section className="mt-20 mx-8 lg:mx-40">
+    <section className="mt-20 mx-8 lg:mx-20">
       <div data-aos="fade-down">
         <h1 className="text-black text-5xl  text-center mb-5 mt-12 font-semibold ">
           Our
@@ -44,16 +44,18 @@ const ChefSection = () => {
               <img src={chef.picture} alt="chef" className="h-60" />
             </figure>
             <div className="card-body">
-              <h1 className="card-title text-xxl lg:text-3xl">{chef.name}</h1>
-              <h6>
-                <span className=" me-2  text-red-500 font-semibold">
+              <h1 className="card-title text-xl lg:mb-3 lg:text-4xl">
+                {chef.name}
+              </h1>
+              <h6 className="font-bold">
+                <span className=" me-2 lg:text-xl text-yellow-500 font-semibold">
                   Experience :
                 </span>{" "}
                 {chef.years_of_experience} Years
               </h6>
-              <h6>
+              <h6 className="font-bold">
                 {" "}
-                <span className=" me-2  font-semibold text-red-500">
+                <span className=" me-2  font-semibold lg:text-xl text-yellow-500">
                   {" "}
                   Numbers of recipes :{" "}
                 </span>{" "}
@@ -61,16 +63,19 @@ const ChefSection = () => {
               </h6>
               <div className="card-actions mt-5 lg:mt-7 flex justify-between">
                 <div>
-                  <button className="btn border border-0 bg-blue-400 text-white text-xxl">
+                  <button className="flex font-bold items-center  text-black text-2xl">
                     Likes :{" "}
-                    <Icon icon="mdi:like-outline" className="ms-2 me-2" />{" "}
-                    {chef.likes}
+                    <span className="text-blue-600 ms-2">{chef.likes} </span>{" "}
+                    <Icon
+                      icon="mdi:like-outline"
+                      className="ms-2 me-2 text-blue-600"
+                    />
                   </button>
                 </div>
                 <div>
                   {" "}
                   <Link to={`details/${chef.id}`}>
-                    <button className="btn bg-yellow-500 border border-0">View Details</button>
+                    <AwesomeButton type="danger">View Details</AwesomeButton>
                   </Link>
                 </div>
               </div>
