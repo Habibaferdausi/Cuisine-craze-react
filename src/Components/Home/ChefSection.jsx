@@ -44,26 +44,26 @@ const ChefSection = () => {
               <img src={chef.picture} alt="chef" className="h-60" />
             </figure>
             <div className="card-body">
-              <h1 className="card-title text-xl lg:mb-3 lg:text-4xl">
+              <h1 className="card-title text-xl lg:mb-3 lg:text-3xl">
                 {chef.name}
               </h1>
-              <h6 className="font-bold">
-                <span className=" me-2 lg:text-xl text-yellow-500 font-semibold">
+              <h6 className="">
+                <span className=" me-2 lg:text-lg text-yellow-500 font-semibold">
                   Experience :
                 </span>{" "}
                 {chef.years_of_experience} Years
               </h6>
               <h6 className="font-bold">
                 {" "}
-                <span className=" me-2  font-semibold lg:text-xl text-yellow-500">
+                <span className=" me-2  font-semibold lg:text-lg text-yellow-500">
                   {" "}
                   Numbers of recipes :{" "}
                 </span>{" "}
                 {chef.num_recipes}{" "}
               </h6>
-              <div className="card-actions mt-5 lg:mt-7 flex justify-between">
+              <div className=" mt-5 lg:mt-7 flex items-center justify-between">
                 <div>
-                  <button className="flex font-bold items-center  text-black text-2xl">
+                  <button className="flex font-bold items-center  justify-center text-black text-lg">
                     Likes :{" "}
                     <span className="text-blue-600 ms-2">{chef.likes} </span>{" "}
                     <Icon
