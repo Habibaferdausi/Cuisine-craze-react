@@ -177,7 +177,9 @@ const Navbar = () => {
                 />
                 <div className="absolute bottom-0 right-0 bg-gray-200 rounded-full w-3 h-3"></div>
               </div>
-              <span className="mr-3 ">{user.displayName}</span>
+              <span className="mr-3 text-red-300 font-bold ">
+                {user.displayName}
+              </span>
               <button onClick={handleLogout} className="btn btn-danger">
                 Logout
               </button>
